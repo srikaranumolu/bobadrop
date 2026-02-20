@@ -1,11 +1,32 @@
+/* The animation code */
+@keyframes myAnimation {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 img {
     width: 200px;
+    animation: myAnimation 1s ease-in;
 }
 
 body {
     text-align: center;
     font-family: 'Arial';
-    background: beige;
+    background: linear-gradient(to right, red, yellow);
     color: blueviolet;
-
+    padding: 20px;
 }
+
+@media screen and (max-width: 1000px) {
+    img {
+        width: 100px;
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
